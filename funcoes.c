@@ -11,7 +11,7 @@ double qCF (double CF){
 	}
 	else{
 		
-		q1 = A + (B * log(CF)) + C * (pow(log10(CF), 2)) + (D * pow(log10(CF), 3));
+		q1 = A + (B * log10(CF)) + C * (pow(log10(CF), 2)) + (D * pow(log10(CF), 3));
 
 		return q1;
 	
@@ -23,7 +23,7 @@ double qpH (double pH){
 
 	double q2, A = 0.05421, B = 1.23, C = -0.09873;
 
-	if (pH > 12){
+	if (pH >= 12){
 		
 		return 3;
 
@@ -43,7 +43,7 @@ double qpH (double pH){
 
 double qDBO (double DBO){
 
-	double q3, A = 102.6, B = -0.01101;
+	double q3, A = 102.6, B = -0.1101;
 
 	if (DBO > 30){
 		return 2;
@@ -57,7 +57,7 @@ double qDBO (double DBO){
 
 double qNT (double NT){
 
-	double q4, A = 98.96, B = -0.01139, C = -0.006457;
+	double q4, A = 98.96, B = -0.2232, C = -0.006457;
 
 	if (NT > 100){
 		return 1;
@@ -131,7 +131,7 @@ double qOxi (double Oxi){
 
 	double q9, A = 100.8, B = -106, C = -3745;
 
-	if (Oxi >= 140){
+	if (Oxi == 140){
 		return 47;
 	}else{
 
