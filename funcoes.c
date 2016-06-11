@@ -1,4 +1,4 @@
-#include <stdion.h>
+#include <stdio.h>
 #include <math.h>
 
 double qCF (double CF){
@@ -72,7 +72,7 @@ double qNT (double NT){
 
 double qFT (double FT){
 
-	double q5, A= 213.7, B = -1.680, C = 0.3325
+	double q5, A= 213.7, B = -1.680, C = 0.3325;
 
 	if(FT > 10){
 		return 1;
@@ -129,11 +129,10 @@ double qST (double ST){
 
 double qOxi (double Oxi){
 
-	double q9, A = 100.8, B  -106, C = -3745;
+	double q9, A = 100.8, B = -106, C = -3745;
 
-	if (Oxi >= 140)
-	{
-		return 47
+	if (Oxi >= 140){
+		return 47;
 	}else{
 
 		double q9 = A * exp(pow(Oxi + B, 2) / C);
