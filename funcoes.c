@@ -33,7 +33,7 @@ double qpH (double pH){
 
 	}else {
 
-		q2 = A * pow(pH, (B * pH) + (C * pow(pH, 2))) + 5,213;
+		q2 = A * pow(pH, (B * pH) + (C * pow(pH, 2))) + 5.213;
 
 		return q2;
 
